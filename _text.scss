@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Text related mixins
+   ========================================================================== */
+
+/**
+ * User select, only safe value is 'none'
+ */
+
+@mixin user-select($type: none) {
+  -webkit-user-select: $type;
+     -moz-user-select: $type;
+      -ms-user-select: $type;
+          user-select: $type;
+}
