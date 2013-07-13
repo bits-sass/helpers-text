@@ -1,8 +1,10 @@
 === HEAD
 
+* README: add link to parent repository
+
 === 0.2.0 (July 13, 2013)
 
-* Complete the README file
+* Finish the README file
 * Remove `user-select` mixin
 * Add `font-size` mixin
 * Add basic variables
