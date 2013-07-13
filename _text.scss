@@ -5,11 +5,11 @@
 /**
  * Variables
  *
- * Usually it is good to override these.
+ * It is recommended to override these.
  *
- * 1. Should we use rem-based font-size? Defaults to 'false'.
- * 2. Base 'font-size' of your app, defaults to '14px'.
- * 3. Base 'line-height' of your app, defaults to '20px'.
+ * 1. Should we use rem-based font-size?
+ * 2. Base 'font-size' of your app.
+ * 3. Base 'line-height' of your app.
  */
 
 $bits-use-rem: false !default; /* 1 */
@@ -26,8 +26,8 @@ $bits-base-line-height: 20px !default; /* 3 */
  *    base line-height. Thanks to @redclov3r for this part.
  *    See http://jsfiddle.net/redclover/mkYtY.
  *
- * -------------
- * Example uses:
+ * --------------
+ * Example usage:
  *
  * $bits-base-line-height: 20px;
  *
