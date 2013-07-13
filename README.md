@@ -10,9 +10,9 @@ Read more about [Bits.css toolkit](https://github.com/bits-css/bits.css).
 
 ## Installation
 
-* __Bower:__ bower install --save bits-css-mixins-text
+* __Bower:__ `bower install --save bits-css-mixins-text`
 * __Download:__ [zip](https://github.com/bits-css/mixins-text/zipball/master), [tar.gz](https://github.com/bits-css/mixins-text/tarball/master)
-* __Git:__ git clone https://github.com/bits-css/mixins-text.git
+* __Git:__ `git clone https://github.com/bits-css/mixins-text.git`
 
 ## Available SASS variables
 
