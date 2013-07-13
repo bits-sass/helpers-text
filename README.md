@@ -1,6 +1,6 @@
 # Bits.css mixins: text
 
-Collection of text-related mixins.
+Collection of text-related mixins. See [other mixins](https://github.com/bits-css/mixins).
 
 Read more about [Bits.css toolkit](https://github.com/bits-css/bits.css).
 
