@@ -4,10 +4,6 @@ Collection of text-related mixins. See [other mixins](https://github.com/bits-cs
 
 Read more about [Bits.css toolkit](https://github.com/bits-css/bits.css).
 
-## Requirements
-
-* Sass 3.2+
-
 ## Installation
 
 * __Bower:__ `bower install --save bits-css-mixins-text`
@@ -23,6 +19,10 @@ Read more about [Bits.css toolkit](https://github.com/bits-css/bits.css).
 ## Available mixins
 
 * `font-size` - sets font size while ensuring proper vertical rhythm using single value
+
+## Requirements
+
+* Sass 3.2+
 
 ## Browser support
 

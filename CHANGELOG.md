@@ -1,6 +1,7 @@
 === HEAD
 
-* README: add link to parent repository
+* README: Add link to parent repository
+* README: Move _Requirements_ section
 
 === 0.2.0 (July 13, 2013)
 
