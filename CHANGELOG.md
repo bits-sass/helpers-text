@@ -1,5 +1,8 @@
 === HEAD
 
+=== 0.3.0 (July 14, 2013)
+
+* Rename organization's name to 'Bits.scss'
 * README: Add link to parent repository
 * README: Move _Requirements_ section
 

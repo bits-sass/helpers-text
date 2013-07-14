@@ -1,14 +1,14 @@
-# Bits.css mixins: text
+# Bits.scss mixins: text
 
-Collection of text-related mixins. See [other mixins](https://github.com/bits-css/mixins).
+Collection of text-related mixins. See [other mixins](https://github.com/bits-scss/mixins).
 
-Read more about [Bits.css toolkit](https://github.com/bits-css/bits.css).
+Read more about [Bits.scss toolkit](https://github.com/bits-scss/bits.scss).
 
 ## Installation
 
-* __Bower:__ `bower install --save bits-css-mixins-text`
-* __Download:__ [zip](https://github.com/bits-css/mixins-text/zipball/master), [tar.gz](https://github.com/bits-css/mixins-text/tarball/master)
-* __Git:__ `git clone https://github.com/bits-css/mixins-text.git`
+* __Bower:__ `bower install --save bits-scss-mixins-text`
+* __Download:__ [zip](https://github.com/bits-scss/mixins-text/zipball/master), [tar.gz](https://github.com/bits-scss/mixins-text/tarball/master)
+* __Git:__ `git clone https://github.com/bits-scss/mixins-text.git`
 
 ## Available SASS variables
 
