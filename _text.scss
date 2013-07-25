@@ -17,14 +17,63 @@ $bits-use-rem: false !default; /* 1 */
 $bits-base-font-size: 14px !default; /* 2 */
 $bits-base-line-height: 20px !default; /* 3 */
 
+
+
+/* Functions
+   ========================================================================== */
+
+/**
+ * Returns unitless multiple of 'line-height' based on 'font-size'
+ *
+ * --------------
+ * Example usage:
+ *
+ * .example1 {                                         ->    .example1 {
+ *   font-size: 14px;                                  ->      font-size: 14px;
+ *   line-height: relative-line-height(14px, 20px);    ->      line-height: 1.42857; // = 20px
+ * }                                                   ->    }
+ *
+ * .example2 {                                         ->    .example {
+ *   font-size: 32px;                                  ->      font-size: 32px;
+ *   line-height: relative-line-height(32px, 20px);    ->      line-height: 1.25; // = 40px
+ * }                                                   ->    }
+ */
+
+@function relative-line-height($font-size, $base-line-height) {
+  @return ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+}
+
+/**
+ * Returns multiple of 'line-height' based on 'font-size' in length value (px, em, ...)
+ *
+ * --------------
+ * Example usage:
+ *
+ * .example1 {                                         ->    .example1 {
+ *   font-size: 14px;                                  ->      font-size: 14px;
+ *   line-height: absolute-line-height(14px, 20px);    ->      line-height: 20px;
+ * }
+ *
+ * .example2 {                                         ->    .example2 {
+ *   font-size: 32px;                                  ->      font-size: 32px;
+ *   line-height: absolute-line-height(32px, 20px);    ->      line-height: 40px;
+ * }                                                   ->    }
+ */
+
+@function absolute-line-height($font-size, $base-line-height) {
+  @return ceil($font-size / $base-line-height) * $base-line-height;
+}
+
+
+
+/* Mixins
+   ========================================================================== */
+
 /**
  * Sets font size while ensuring proper vertical rhythm using single value
  *
  * 1. IE8 fallback font-size value
  * 2. Calculate font-size value in rem
- * 3. Ensure proper vertical rhythm by setting line-height to a multiple of your
- *    base line-height. Thanks to @redclov3r for this part.
- *    See http://jsfiddle.net/redclover/mkYtY.
  *
  * --------------
  * Example usage:
@@ -33,17 +82,17 @@ $bits-base-line-height: 20px !default; /* 3 */
  *
  * .example1 {                     ->    .example1 {
  *   @include font-size(14px);     ->      font-size: 14px;
- * }                               ->      line-height: 20px;
+ * }                               ->      line-height: 1.42857; // = 20px
  *                                 ->    }
  *
  * .example2 {                     ->    .example2 {
  *   @include font-size(24px);     ->      font-size: 24px;
- * }                               ->      line-height: 40px;
+ * }                               ->      line-height: 1.66667; // = 40px
  *                                 ->    }
  *
  * .example3 {                     ->    .example3 {
  *   @include font-size(36px);     ->      font-size: 36px;
- * }                               ->      line-height: 40px;
+ * }                               ->      line-height: 1.11111; // = 40px
  *                                 ->    }
  */
 
@@ -55,6 +104,6 @@ $bits-base-line-height: 20px !default; /* 3 */
   }
 
   @if $line-height == true {
-    line-height: ceil($font-size / $bits-base-line-height) * ($bits-base-line-height / $font-size); /* 3 */
+    line-height: relative-line-height($font-size, $bits-base-line-height);
   }
 }

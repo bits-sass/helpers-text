@@ -1,6 +1,6 @@
 {
-  "name": "bits-sass-mixins-text",
-  "version": "0.3.1",
+  "name": "bits-sass-helpers-text",
+  "version": "0.4.0",
   "author": "Lukáš Mladý",
   "main": "_text.scss"
 }
