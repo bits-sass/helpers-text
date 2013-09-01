@@ -1,5 +1,7 @@
 === HEAD
 
+* Improve comments
+
 === 0.4.0 (July 25, 2013)
 
 * Rename package name to a more precise 'helpers'
