@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.1 (September 2, 2013)
+
 * Improve comments
 * Use new style for comments
 
