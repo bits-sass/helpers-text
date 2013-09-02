@@ -1,6 +1,7 @@
 === HEAD
 
 * Improve comments
+* Use new style for comments
 
 === 0.4.0 (July 25, 2013)
 

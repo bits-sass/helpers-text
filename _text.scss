@@ -2,24 +2,22 @@
    Text related helpers
    ========================================================================== */
 
+/* Variables
+   ========================================================================== */
+
 /**
- * Variables
- *
- * It is recommended to override these.
- *
- * 1. Should we use rem-based font-size?
- * 2. Base 'font-size' of your app.
- * 3. Base 'line-height' of your app.
+ * Should we use rem-based font-size?
  */
 
-$bits-use-rem: false !default; /* 1 */
+$bits-use-rem: false !default;
 
-$bits-base-font-size: 14px !default; /* 2 */
-$bits-base-line-height: 20px !default; /* 3 */
+/**
+ * 1. Base 'font-size' of your app.
+ * 2. Base 'line-height' of your app.
+ */
 
-/* -------------------------------------------------------------------------- */
-
-
+$bits-base-font-size: 14px !default; /* 1 */
+$bits-base-line-height: 20px !default; /* 2 */
 
 /* Functions
    ========================================================================== */
@@ -27,37 +25,33 @@ $bits-base-line-height: 20px !default; /* 3 */
 /**
  * Return unitless multiple of 'line-height' based on 'font-size'
  *
- * --------------
- * Example usage:
- * --------------
+ * Example:
  *
  * .example1 {
  *   font-size: 14px;
  *   line-height: relative-line-height(14px, 20px);
  * }
  *
- * <= output ==
+ * Output:
  *
  * .example1 {
  *   font-size: 14px;
  *   line-height: 1.42857; // = 20px
  * }
  *
- * == end ====>
+ * Example:
  *
  * .example2 {
  *   font-size: 32px;
  *   line-height: relative-line-height(32px, 20px);
  * }
  *
- * <= output ==
+ * Output:
  *
  * .example {
  *   font-size: 32px;
  *   line-height: 1.25; // = 40px
  * }
- *
- * == end ====>
  */
 
 @function relative-line-height($font-size, $base-line-height) {
@@ -68,44 +62,38 @@ $bits-base-line-height: 20px !default; /* 3 */
  * Return multiple of 'line-height' based on 'font-size' in length value
  * (px, em, ...)
  *
- * --------------
- * Example usage:
- * --------------
+ * Example:
  *
  * .example1 {
  *   font-size: 14px;
  *   line-height: absolute-line-height(14px, 20px);
  * }
  *
- * <= output ==
+ * Output:
  *
  * .example1 {
  *    font-size: 14px;
  *    line-height: 20px;
  * }
  *
- * == end ====>
+ * Example:
  *
  * .example2 {
  *   font-size: 32px;
  *   line-height: absolute-line-height(32px, 20px);
  * }
  *
- * <= output ==
+ * Output:
  *
  * .example2 {
  *   font-size: 32px;
  *   line-height: 40px;
  * }
- *
- * == end ====>
  */
 
 @function absolute-line-height($font-size, $base-line-height) {
   @return ceil($font-size / $base-line-height) * $base-line-height;
 }
-
-
 
 /* Mixins
    ========================================================================== */
@@ -113,11 +101,7 @@ $bits-base-line-height: 20px !default; /* 3 */
 /**
  * Sets font size while ensuring proper vertical rhythm using single value
  *
- * 1. IE8 fallback font-size value
- * 2. Calculate font-size value in rem
- *
- * --------------
- * Example usage:
+ * Example:
  *
  * $bits-base-line-height: 20px;
  *
@@ -125,41 +109,43 @@ $bits-base-line-height: 20px !default; /* 3 */
  *   @include font-size(14px);
  * }
  *
- * <= output ==
+ * Output:
  *
  *  .example1 {
  *    font-size: 14px;
  *    line-height: 1.42857; // = 20px
  *  }
  *
- * == end ====>
+ * Example:
  *
  * .example2 {
  *   @include font-size(24px);
  * }
  *
- *
- * <= output ==
+ * Output:
  *
  * .example2 {
  *   font-size: 24px;
  *   line-height: 1.66667; // = 40px
  * }
  *
- * == end ====>
+ * Example:
  *
  * .example3 {
  *   @include font-size(36px);
  * }
  *
- * <= output ==
+ * Output:
  *
  * .example3 {
  *   font-size: 36px;
  *   line-height: 1.11111; // = 40px
  * }
- *
- * == end ====>
+ */
+
+/**
+ * 1. IE8 fallback font-size value
+ * 2. Calculate font-size value in rem
  */
 
 @mixin font-size($font-size, $line-height: true) {
